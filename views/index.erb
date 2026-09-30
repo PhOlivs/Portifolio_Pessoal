@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f4f0e5">
+    <meta name="description" content="Portfólio pessoal — projetos, ideias e caminhos em construção.">
+    <title>Seu Nome — Portfólio</title>
+    <link rel="stylesheet" href="/css/site.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="site-header">
+      <a class="wordmark" href="#inicio" aria-label="Seu Nome, início">seu nome<span>.</span></a>
+      <nav aria-label="Navegação principal">
+        <a href="#sobre">Sobre</a>
+        <a href="#projetos">Projetos</a>
+        <a class="nav-contact" href="mailto:seu-email@exemplo.com">Vamos conversar <span aria-hidden="true">↗</span></a>
+      </nav>
+    </header>
+
+    <main id="conteudo">
+      <section class="hero" id="inicio" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> Portfólio pessoal</p>
+          <h1 id="hero-title">Ideias que<br>criam <span class="handwritten">raízes.</span></h1>
+          <p class="hero-intro">Oi, eu sou <strong>Seu Nome</strong> — [conte em uma frase o que você faz e o que gosta de construir].</p>
+          <a class="text-link" href="#projetos">Conheça meu trabalho <span aria-hidden="true">↓</span></a>
+        </div>
+
+        <div class="landscape" aria-hidden="true">
+          <div class="sun"></div>
+          <div class="hill hill-back"></div>
+          <div class="hill hill-front"></div>
+          <div class="wildflower flower-one"><i></i></div>
+          <div class="wildflower flower-two"><i></i></div>
+          <span class="landscape-note">feito com calma<br>e curiosidade</span>
+        </div>
+        <p class="hero-caption">Um espaço para experimentar, aprender e compartilhar.</p>
+      </section>
+
+      <section class="about section-wrap" id="sobre" aria-labelledby="about-title">
+        <div class="section-label"><span>01</span> Um pouco sobre mim</div>
+        <div class="about-content">
+          <h2 id="about-title">Criar é prestar atenção.</h2>
+          <p>[Escreva aqui uma apresentação breve: sua trajetória, o que desperta sua curiosidade e como você gosta de trabalhar.]</p>
+          <p class="about-note">Atualmente, explorando <span>[seus temas de interesse]</span>.</p>
+        </div>
+      </section>
+
+      <section class="projects section-wrap" id="projetos" aria-labelledby="projects-title">
+        <div class="projects-heading">
+          <div>
+            <div class="section-label"><span>02</span> Coisas que fiz</div>
+            <h2 id="projects-title">Projetos em destaque</h2>
+          </div>
+          <p>Pequenas ideias, cuidadas até ganharem forma.</p>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card project-card-sage">
+            <span class="project-number">01 / Projeto</span>
+            <div class="project-art art-orbit" aria-hidden="true"><span></span><i></i></div>
+            <div class="project-details">
+              <h3>[Nome do projeto]</h3>
+              <p>[Uma frase sobre o desafio, sua contribuição e o resultado.]</p>
+              <span class="project-type">[Área ou tecnologia]</span>
+            </div>
+          </article>
+          <article class="project-card project-card-clay">
+            <span class="project-number">02 / Projeto</span>
+            <div class="project-art art-window" aria-hidden="true"><span></span><i></i></div>
+            <div class="project-details">
+              <h3>[Nome do projeto]</h3>
+              <p>[Uma frase sobre o desafio, sua contribuição e o resultado.]</p>
+              <span class="project-type">[Área ou tecnologia]</span>
+            </div>
+          </article>
+          <article class="project-card project-card-sky">
+            <span class="project-number">03 / Projeto</span>
+            <div class="project-art art-leaf" aria-hidden="true"><span></span><i></i></div>
+            <div class="project-details">
+              <h3>[Nome do projeto]</h3>
+              <p>[Uma frase sobre o desafio, sua contribuição e o resultado.]</p>
+              <span class="project-type">[Área ou tecnologia]</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="contact" aria-labelledby="contact-title">
+        <p class="eyebrow">Uma ideia florescendo?</p>
+        <h2 id="contact-title">Vamos conversar.</h2>
+        <a class="contact-link" href="mailto:seu-email@exemplo.com">seu-email@exemplo.com <span aria-hidden="true">↗</span></a>
+        <span class="contact-sun" aria-hidden="true"></span>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>© <%= Time.now.year %> Seu Nome</span>
+      <span>Feito com cuidado, no Brasil <span aria-hidden="true">✳</span></span>
+    </footer>
+  </body>
+</html>
