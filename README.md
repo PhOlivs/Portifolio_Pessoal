@@ -31,8 +31,12 @@ Ela serve como base para apresentar sua trajetória, trabalhos e forma de contat
 ├── Gemfile             # Dependências do projeto
 ├── Gemfile.lock        # Lock do bundle
 ├── public/
-│   └── css/
-│       └── site.css    # Estilos do site
+│   ├── css/
+│   │   └── site.css    # Estilos do site
+│   └── js/
+│       └── projects-carousel.js # Controles acessíveis do carrossel
+├── data/
+│   └── projects.yml    # Conteúdo dos projetos
 ├── views/
 │   └── index.erb       # Página principal do portfólio
 ├── vendor/
@@ -87,15 +91,24 @@ HOST=0.0.0.0 PORT=3000 BUNDLE_PATH=vendor/bundle bundle exec ruby app.rb
 
 ## Personalização
 
+O site oferece modo claro e escuro pelo botão de tema no cabeçalho. A preferência inicial acompanha o sistema; uma escolha manual fica salva neste navegador.
+
 ### Conteúdo do portfólio
 
-Edite o arquivo `views/index.erb` para alterar:
+Edite `data/projects.yml` para adicionar ou atualizar projetos. Cada item usa estes campos:
 
-- nome;
-- descrição pessoal;
-- projetos;
-- e-mail de contato;
-- textos gerais da página.
+- `name`: nome do projeto;
+- `description`: resumo;
+- `category`: tecnologias ou área;
+- `image`: caminho da captura dentro de `public/`, ou vazio enquanto não houver imagem;
+- `image_alt`: descrição da imagem para leitores de tela;
+- `github` e `deploy`: endereços dos links, que podem ficar vazios se não forem aplicáveis.
+
+Para exibir uma captura, copie a imagem para `public/images/projects/` e informe o caminho a partir de `public`, por exemplo: `image: "/images/projects/meu-projeto.webp"`. Prefira imagens WebP ou AVIF otimizadas e capturas em proporção 16:9. Quando `image` estiver vazio, o cartão mostra uma indicação de onde adicionar a captura.
+
+Para incluir outro cartão, copie um dos blocos de `data/projects.yml`, cole no final da lista e altere os campos. O carrossel se ajusta automaticamente à quantidade de projetos, avança continuamente e volta ao início ao chegar ao fim. Use o botão **Pausar/Reproduzir**, as setas, arraste a lista ou navegue pelo carrossel com teclado. A reprodução automática começa pausada se o sistema estiver configurado para reduzir animações.
+
+Edite `views/index.erb` para alterar textos gerais, nome e e-mail de contato. Os links de exemplo para GitHub e deploy em `data/projects.yml` devem ser substituídos pelos destinos reais.
 
 ### Estilo visual
 
