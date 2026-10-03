@@ -1,16 +1,17 @@
 # Portfólio pessoal em Ruby + Sinatra
 
-Este projeto é uma landing page de portfólio pessoal desenvolvida com Ruby, Sinatra e ERB. A interface é simples, responsiva e usa HTML/CSS puro, sem necessidade de frameworks frontend.
+Este projeto é um portfólio pessoal desenvolvido com Ruby, Sinatra e ERB. A interface responsiva usa HTML, CSS e JavaScript nativos, com uma identidade editorial inspirada em cadernos de campo, tons naturais e ilustrações orgânicas.
 
 ## Visão geral
 
 A aplicação expõe uma única página com seções como:
 
 - apresentação inicial;
-- descrição pessoal;
+- trajetória pessoal;
+- interesses de estudo;
 - projetos em destaque;
 - contato;
-- rodapé com ano atual dinâmico.
+- alternância entre temas claro e escuro.
 
 Ela serve como base para apresentar sua trajetória, trabalhos e forma de contato de forma elegante e minimalista.
 
@@ -33,8 +34,11 @@ Ela serve como base para apresentar sua trajetória, trabalhos e forma de contat
 ├── public/
 │   ├── css/
 │   │   └── site.css    # Estilos do site
-│   └── js/
-│       └── projects-carousel.js # Controles acessíveis do carrossel
+│   ├── js/
+│   │   ├── projects-carousel.js # Controles acessíveis do carrossel
+│   │   └── theme-toggle.js      # Alternância de tema
+│   └── images/
+│       └── projects/            # Capturas dos projetos
 ├── data/
 │   └── projects.yml    # Conteúdo dos projetos
 ├── views/
@@ -91,7 +95,7 @@ HOST=0.0.0.0 PORT=3000 BUNDLE_PATH=vendor/bundle bundle exec ruby app.rb
 
 ## Personalização
 
-O site oferece modo claro e escuro pelo botão de tema no cabeçalho. A preferência inicial acompanha o sistema; uma escolha manual fica salva neste navegador.
+O site oferece modo claro e escuro pelo botão de tema no cabeçalho. A preferência inicial acompanha o sistema; uma escolha manual fica salva neste navegador. O conteúdo pessoal está no template `views/index.erb`; mantenha datas, experiências e resultados alinhados à sua trajetória real.
 
 ### Conteúdo do portfólio
 
@@ -106,7 +110,7 @@ Edite `data/projects.yml` para adicionar ou atualizar projetos. Cada item usa es
 
 Para exibir uma captura, copie a imagem para `public/images/projects/` e informe o caminho a partir de `public`, por exemplo: `image: "/images/projects/meu-projeto.webp"`. Prefira imagens WebP ou AVIF otimizadas e capturas em proporção 16:9. Quando `image` estiver vazio, o cartão mostra uma indicação de onde adicionar a captura.
 
-Para incluir outro cartão, copie um dos blocos de `data/projects.yml`, cole no final da lista e altere os campos. O carrossel se ajusta automaticamente à quantidade de projetos, avança continuamente e volta ao início ao chegar ao fim. Use o botão **Pausar/Reproduzir**, as setas, arraste a lista ou navegue pelo carrossel com teclado. A reprodução automática começa pausada se o sistema estiver configurado para reduzir animações.
+Para incluir outro projeto, copie o bloco existente em `data/projects.yml`, cole no final da lista e altere os campos. Com dois ou mais projetos, o carrossel avança continuamente e volta ao início ao chegar ao fim. Use o botão **Pausar/Reproduzir**, as setas ou a rolagem por toque e teclado. Com apenas um projeto, os controles são ocultados. A reprodução automática começa pausada se o sistema estiver configurado para reduzir animações.
 
 Edite `views/index.erb` para alterar textos gerais, nome e e-mail de contato. Os links de exemplo para GitHub e deploy em `data/projects.yml` devem ser substituídos pelos destinos reais.
 
@@ -118,7 +122,7 @@ Você pode ajustar cores, espaçamento, tipografia e layout conforme o estilo de
 
 ## Dica
 
-Como este projeto é um modelo inicial, muitos textos e dados aparecem no formato de placeholders, como "Seu Nome" e "seu-email@exemplo.com". Substitua esses valores para adaptar o portfólio ao seu perfil.
+Revise os textos de apresentação e os links antes de publicar. Projetos sem imagem ou sem links reais continuam identificados como conteúdo a preencher, em vez de apontarem para endereços demonstrativos.
 
 ## Licença
 
